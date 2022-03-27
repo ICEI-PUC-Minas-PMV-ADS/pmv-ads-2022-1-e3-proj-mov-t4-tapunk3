@@ -6,7 +6,7 @@
 
 `EIXO 3`
 
-DESENVOLVIMENTO DE UMA APLICAÇÃO MÓVEL EM UM AMBIENTE DE NEGÓCIO
+Desenvolvimento de uma aplicação móvel em um ambiente de negócio.
 
 ## Integrantes
 
