@@ -1,23 +1,26 @@
-# TÍTULO DO PROJETO
+# APP VOLUNTARIADO 
 
-`CURSO`
+`ANÁLISE DE DESENVOLVIMENTO DE SISTEMA`
 
-`DISCIPLINA`
+`DESENVOLVIMENTO DE UM APLICAÇÃO INTERATIVA`
 
-`SEMESTRE`
+`EIXO 3`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+DESENVOLVIMENTO DE UMA APLICAÇÃO MÓVEL EM UM AMBIENTE DE NEGÓCIO
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Aline Gabriela Tibúrcio
+* Alexsander Amorim Kalil
+* Douglas Macedo da Silva
+* Lídia Niobey Frossard
+* Rodrigo Charles Oliveira Cardoso
+* Tatiany Belém dos Santos
+* Thais Soares Alves da Silva Rossi
 
 ## Orientador
 
-* Nome completo do professor 1
+* Mateus Curcino De Lima
 
 ## Instruções de utilização
 
