@@ -58,3 +58,8 @@ O diagrama contempla as principais ligações previstas entre casos de uso e ato
 
 ![Diagrama]
 
+## Planejamento do cronograma 
+
+Nessa parte, mostraremos processo envolvendo gestão financeira do Projeto. Planejamento do Gerenciamento de custo, Estimativa de custo, Determinação do Orçamento e Controle dos custos. A parte mais significativa é Recursos Humanos onde foi calculado o valor de horas estimadas do projeto multiplicado por 30 Reais a hora. Cobrado também o valor de 40% de Serviços onde inclui a despesa e o lucro do executor. 
+
+![Cronograma]
