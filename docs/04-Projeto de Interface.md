@@ -1,36 +1,77 @@
 
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
-
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+Dentre as preocupações para a montagem da interface do aplicativo, estabelecemos um foco em questões como simplificar a vida dos usuários e a familiaridade com outros aplicativos já existentes no mercado, sendo dinâmico, interativo e acessível. Desta forma, o projeto tem uma identidade visual moderna e com uma linguagem que “conversa” facilmente com os usuários, sendo o mesmo funcional em smartfones e tablets. 
 
 ## Diagrama de Fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
+O diagrama apresentado na Figura X abaixo mostra o fluxo de interação do voluntário e da pelas telas aplicativo. Cada uma das telas deste fluxo é detalhada na seção de Wireframes que se segue. Para visualizar o aplicativo interativo, acesse o pelo link:(https://www.figma.com/proto/moNiEqYXwOHL2fPiI2mBOd/Wireframe-Ong-Friendly-New?node-id=1%3A99&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A7)
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
+![Diagrama de Fluxo]()
 
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Conforme fluxo de telas do projeto, apresentado no item anterior, as telas do aplicativo são apresentadas em detalhes nos itens que se seguem. Para visualizar o Wire frame interativo de alta fidelidade, acesse o link do figma. O aplicativo segue um fluxo de via dupla, o usuário pode voltar ou seguir conforme suas necessidades 
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+![wireframes]
+
+## Tela – Splash Page  
+
+A tela de apresentação do aplicativo, tela de carregamento para iniciar.	
+
+![splash]
+
+## Tela – Inicial 
+
+Esta tela apresenta o direcionamento, se o usuário é uma ong ou um voluntário. Sua função e direcionar corretamente a jornada de cada usuário. 
+
+![inicial]
+
+## Tela – Login Ong 
+
+A tela de login da ONG tem como objetivo validar o usuário, possibilitando o mesmo também recuperar a senha e caso não tenha cadastro se cadastrar. Após login ela leva o usuário para a tela inicial da Ong. 
+
+![Login Ong]
+
+## Tela – Inicial da Ong 
+
+Está tela permite ao usuário listar as atividades da ong e também cadastrar uma atividade. Conforme fluxograma o botão voltar irá retornar para a página anterior a esta. 
+
+![Inicial Ong]
+
+## Tela – Cadastro de Atividades 
+
+Na tela cadastro de atividades o usuário tipo Ong poderá cadastrar uma atividade. Conforme fluxograma o botão voltar irá retornar para a página anterior a esta.
+
+![cadastro de atividades]
+
+## Tela – Lista de Atividades 
+
+Nesta tela lista de atividades o usuário terá a possibilidade de ver todas as atividades que foram criadas, podendo deletar quantas atividades quiser. Conforme fluxograma o botão voltar irá retornar para a página anterior a esta. 
+
+![Lista de atividade]
+
+## Tela – Cadastro da Ong 
+
+Nesta tela o usuário informa dados sobre a ong para poder realizar o cadastro da mesma, após registrado o cadastro o usuário e direcionado para a tela inicial da Ong. Conforme fluxograma o botão voltar irá retornar para a página anterior a esta. 
+
+![Cadastro Ong]
+
+## Tela – Tela de Ongs 
+
+Nesta Tela de Ongs o usuário terá a possibilidade de visualizar uma lista de ong e poder conhecer mais sobre elas e possivelmente encontrar uma ong por nome. Conforme fluxograma o botão voltar irá retornar para a página anterior a esta. 
+
+![Tela de Ongs]
+
+## Tela – Detalhes da Ong 
+
+Nesta Tela de detalhes da Ong o usuário terá a possibilidade de conhecer mais sobre a ong com alguns detalhes e a sua lista de atividades. Conforme fluxograma o botão voltar irá retornar para a página anterior a esta. 
+
+![Detalhes da Ong]
+
+## Tela – Lista de atividades da Ong 
+
+Nesta Tela de lista de atividades da Ong o usuário terá a possibilidade de visualizar as atividades das ongs e se registar em alguma atividade, não há restrição na quantidade de atividades que o usuário pode se registrar. Ao clicar em se registrar ele será direcionado para o aplicativo de WhatsApp, do qual poderá entrar em contato com a ONG. Conforme fluxograma o botão voltar irá retornar para a página anterior a esta. 
+
+![Lista de atividades da Ong]
