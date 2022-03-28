@@ -54,5 +54,5 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 
 <h4 align="center">
-   Feito por <a href="https://www.linkedin.com/in/thais-soares-78846a91/" target="_blank"> Thais </a>, <a href="https://www.linkedin.com/in/rodrigo-charles03/">Rodrigo</a>, <a href="https://www.linkedin.com/in/tatiany-santos-848314150//">Tatianyr</a>, <a href="https://www.linkedin.com/in/alinetiburcio/" target="_blank"> Aline</a>, <a href="hhttps://www.linkedin.com/in/lidiafrossard/">Lidia</a>, e <a href="https://www.linkedin.com/in/douglas-macedo-da-silva-27221b212/">Douglas</a> e <a href="">Alex</a>.
+   Feito com 💖 por: <a href="https://www.linkedin.com/in/thais-soares-78846a91/" target="_blank"> Thais </a>, <a href="https://www.linkedin.com/in/rodrigo-charles03/">Rodrigo</a>, <a href="https://www.linkedin.com/in/tatiany-santos-848314150//">Tatianyr</a>, <a href="https://www.linkedin.com/in/alinetiburcio/" target="_blank"> Aline</a>, <a href="https://www.linkedin.com/in/lidiafrossard/">Lidia</a>, e <a href="https://www.linkedin.com/in/douglas-macedo-da-silva-27221b212/">Douglas</a> e <a href="">Alex</a>.
 </h4>
