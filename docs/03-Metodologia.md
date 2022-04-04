@@ -18,17 +18,13 @@ Os artefatos do projeto são criados com base nas diversas plataformas e a conex
 
 Optamos por utilizar o Git Flow para a gestão do código fonte do software desenvolvido pelo grupo. Desta maneira, conseguimos manter o controle do que está sendo produzido pela equipe, pois a manutenção pode ser realizada em branch, onde, ao mesmo tempo são corrigidas as falhas, implementando novas funcionalidades e total controle da funcionalidade do código. 
 
-![Personas](img/git_flow.PNG)
+![Personas](img/Gitflow.png)
 
 ## Gerenciamento de Projeto
 
-![Organograma]()
+![Organograma](img/Organograma.png)
 
 O grupo irá utilizar o Scrum, pois tem uma gestão ágil de desenvolvimento de software, onde o projeto pode ser divido em ciclos. Com isso, conseguimos planejar o tempo que levamos para finalizar cada etapa do projeto de modo produtivo e eficaz, diminuindo o impacto das alterações no fluxo do processo alcançando os objetivos definidos durante a etapa de planejamento. A equipe está organizada conforme o organograma abaixo:  
-
- 
-
- 
 
 Com a finalidade de organizar e distribuir as tarefas do projeto, a equipe está utilizando o Trello estruturado com as seguintes listas: 
 
@@ -44,8 +40,6 @@ Done: Nesta lista são inclusas tarefas que passaram pelos testes e estão pront
 
 Blocked: Quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está travando a tarefa. 
 
- 
+O quadro kanban do grupo no Trello está disponível através da URL https://trello.com/b/0rasISVx/app-volunt%C3%A1rios e é apresentado no estado atual a seguir:
 
-O quadro kanban do grupo no Trello está disponível através da URL https://trello.com/br e é apresentado no estado atual a seguir:
-
-![Personas]() 
+![Personas](img/Trello1.png) 
