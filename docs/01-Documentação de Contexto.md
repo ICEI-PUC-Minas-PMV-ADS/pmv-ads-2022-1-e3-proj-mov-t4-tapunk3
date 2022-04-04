@@ -20,7 +20,7 @@ Criar um app intuitivo que possibilite a ONG:
 
  
 
-> Cadastrar sua agenda de forma dinâmica 
+ - Cadastrar sua agenda de forma dinâmica 
 
 > - Adquirir uma organização da agenda 
 
