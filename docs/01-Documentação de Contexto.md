@@ -20,13 +20,13 @@ Criar um app intuitivo que possibilite a ONG:
 
  
 
-Cadastrar sua agenda de forma dinâmica 
+> - Cadastrar sua agenda de forma dinâmica 
 
-Adquirir uma organização da agenda 
+> - Adquirir uma organização da agenda 
 
-Otimizar a rotina dos voluntários 
+> - Otimizar a rotina dos voluntários 
 
-Mensurar os dados 
+> - Mensurar os dados 
 
 ## Justificativa 
 
