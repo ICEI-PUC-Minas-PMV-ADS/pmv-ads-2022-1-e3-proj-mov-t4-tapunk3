@@ -1,0 +1,36 @@
+### ONGs
+GET http://localhost:3000/ong
+
+### CREATE
+POST http://localhost:3000/ong
+content-type: application/json
+
+{
+        "id": 1,
+        "nome": "Teste",
+        "email": "teste@teste.com",
+        "logadouro": "rua teste",
+        "numero": 1,
+        "cidade": "teste",
+        "cep": 11222999,
+        "descricao": "Cantinho do Doguinho"
+}
+
+### UPDATE
+PUT http://localhost:3000/ong/1
+
+content-type: application/json
+
+{
+        "id": 1,
+        "nome": "Teste",
+        "email": "teste@teste.com",
+        "logadouro": "rua teste",
+        "numero": 1,
+        "cidade": "teste",
+        "cep": 11222999,
+        "descricao": "Cantinho do Doguinho"
+}
+
+### DELETE ONG
+DELETE http://localhost:3000/ong/1

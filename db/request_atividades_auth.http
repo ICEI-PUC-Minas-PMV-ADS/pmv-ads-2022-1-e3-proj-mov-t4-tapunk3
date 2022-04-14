@@ -1,0 +1,41 @@
+@TOKEN=TOKEN_KEY
+### LOGIN
+POST http://localhost:3000/login
+content-type: application/json
+
+{
+    "email": "teste@teste.br",
+    "password": "teste01"
+}
+
+### ONGs
+GET http://localhost:3000/atividades
+
+### CREATE
+POST http://localhost:3000/660/atividades
+content-type: application/json
+Authorization: : Bearer {{TOKEN}}
+
+{
+        "id": 1,
+        "nome": "Atividade Teste",
+        "data": "01/01/2022",
+        "nvoluntarios": 1
+}
+
+### UPDATE
+PUT http://localhost:3000/660/atividades/1
+Authorization: : Bearer {{TOKEN}}
+
+content-type: application/json
+
+{
+        "id": 1,
+        "nome": "Atividade Teste",
+        "data": "01/01/2022",
+        "nvoluntarios": 1
+}
+
+### DELETE ONG
+DELETE http://localhost:3000/660/atividades/1
+Authorization: : Bearer {{TOKEN}}
