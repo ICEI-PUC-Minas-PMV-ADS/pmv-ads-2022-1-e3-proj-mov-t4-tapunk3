@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -7,61 +7,103 @@ import {
   SafeAreaView,
   StatusBar,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
 import { Title, TextInput, Button } from 'react-native-paper';
+import {useNavigation} from '@react-navigation/native';
+
+import { register } from '../services/authService';
 
 const OngEntrar = () => {
-  const [text, setText] = React.useState('');
+
+  const navigation = useNavigation();
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [logadouro, setLogadouro] = useState('');
+  const [cidade, setCidade] = useState('');
+  const [cep, setCep] = useState('');
+
+
+  const [numero, setNumero] = useState('');
+
+
+  //const [text, setText] = React.useState('');
   const [caixa, onChangeText] = React.useState('Quem Somos.');
+
+  const handleRegister = () => {
+
+    register({
+      name: name,
+      email: email,
+      password: password,
+      logadouro: logadouro,
+      cidade: cidade,
+      cep: cep
+    }).then(res => {
+      console.log(res);
+
+      if(res){
+
+        Alert.alert('Atenção', 'Usuário cadastrado com sucesso!', [
+          {test: "OK", onPress: () => navigation.goBack()}
+        ]);
+      }else{
+        Alert.alert('Atençao', 'Usuário não cadastrado!Tente novamente mais tarde :)');
+      }
+    });
+
+  }
 
   return (
     <>
       <View>
-        <Title style={styles.title}>Cadaste sua Ong</Title>
+        <Title style={styles.title}>Cadastre sua Ong</Title>
       </View>
       <View style={styles.body}>
         <TextInput
           style={styles.caixa}
+          label="Nome"
+          value={name}
+          onChangeText={(text) => setName(text)}
+        />
+        <TextInput
+          style={styles.caixa}
           label="Email"
-          value={text}
-          onChangeText={(text) => setText(text)}
+          value={email}
+          onChangeText={(text) => setEmail(text)}
         />
         <TextInput
           style={styles.caixa}
           label="Senha"
-          value={text}
-          onChangeText={(text) => setText(text)}
-        />
-        <TextInput
-          style={styles.caixa}
-          label="Nome"
-          value={text}
-          onChangeText={(text) => setText(text)}
+          value={password}
+          onChangeText={(text) => setPassword(text)}
         />
         <TextInput
           style={styles.caixa}
           label="Logadouro"
-          value={text}
-          onChangeText={(text) => setText(text)}
+          value={logadouro}
+          onChangeText={(text) => setLogadouro(text)}
         />
         <TextInput
           style={styles.caixa}
           label="Numero"
-          value={text}
-          onChangeText={(text) => setText(text)}
+          value={numero}
+          onChangeText={(text) => setNumero(text)}
           
         />
         <TextInput
           style={styles.caixa}
           label="Cidade"
-          value={text}
-          onChangeText={(text) => setText(text)}
+          value={cidade}
+          onChangeText={(text) => setCidade(text)}
         />
         <TextInput
           style={styles.caixa}
           label="CEP"
-          value={text}
-          onChangeText={(text) => setText(text)}
+          value={cep}
+          onChangeText={(text) => setCep(text)}
         />
         <SafeAreaView>
          
@@ -82,8 +124,14 @@ const OngEntrar = () => {
         <Button
           style={styles.cadastrar}
           mode="contained"
-          onPress={() => console.log('Pressed')}>
+          onPress={handleRegister}>
           Cadastrar Ong
+        </Button>
+        <Button
+          style={styles.cadastrar}
+          mode="contained"
+          onPress={() => navigation.goBack()}>
+          Cancelar
         </Button>
       </View>
     </>

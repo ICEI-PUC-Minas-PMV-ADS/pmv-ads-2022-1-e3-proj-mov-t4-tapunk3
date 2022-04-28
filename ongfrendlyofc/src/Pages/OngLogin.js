@@ -1,10 +1,36 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, AsyncStorage, Alert } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 
-const Cadastroong = () => {
-  const [email, setEmail] = '';
-  const [password, setPassword] = '';
+import  AsyncStorage  from '@react-native-async-storage/async-storage';
+import {useNavigation} from '@react-navigation/native';
+import {userUser} from 'Esperar a Thais';
+import { login } from '../services/authService';
+
+const LoginOng = () => {
+
+  const navigation = useNavigation();
+  const {setSigned, setName} = userUser();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = ( ) => {
+    login({
+      email: email,
+      password: password
+    }).then( res => {
+      console.log(res);
+
+      if(res && res.user){
+        setSigned(true);
+        setName(res.user.name);
+        AsyncStorage.setItem('@TOKEN_KEY', res. accessToken).then();
+      }else{
+        Alert.alert('Atenção', 'Usuário ou senha inválidos!');
+      }
+    });
+  }
 
   return (
     <>
@@ -16,26 +42,27 @@ const Cadastroong = () => {
         <TextInput
           style={styles.input}
           label="E-mail"
-          value={password}
+          value={email}
           onChangeText={(text) => setEmail(text)}
         />
         <TextInput
           style={styles.input}
           label="Senha"
-          onChangeText={(text) => setPassword(text)}
+          value={password}
           secureTextEntry
+          onChangeText={(text) => setPassword(text)}
         />
         <Button
           style={styles.button}
           mode="contained"
-          onPress={() => console.log('Pressed')}>
+          onPress={handleLogin}>
           Entrar
         </Button>
         <Button
           style={styles.button}
           icon="account"
           mode="text"
-          onPress={() => console.log('Pressed')}>
+          onPress={() => navigation.navigate('OngEntrar')}>
           Cadastro
         </Button>
         <Button
@@ -81,4 +108,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Cadastroong;
+export default LoginOng;
