@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image, AsyncStorage, Alert } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 
@@ -6,16 +6,49 @@ import  AsyncStorage  from '@react-native-async-storage/async-storage';
 import {useNavigation} from '@react-navigation/native';
 import {userUser} from 'Esperar a Thais';
 import { login } from '../services/authService';
+import { getUser, insertUser } from './localLoginService';
+
+import { useIsFocused } from '@react-navigation/native'; 
+import { getUnpackedSettings } from 'http2';
+
 
 const LoginOng = () => {
 
   const navigation = useNavigation();
+  const isFocused = useIsFocused();
   const {setSigned, setName} = userUser();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [user, setUser] = useState([]);
+
+  useEffect(() => {
+    getUser().then(dados => {
+      console.log(dados);
+      setUser(dados);
+      });
+  }, [isFocused]);
 
   const handleLogin = ( ) => {
+    insertUser({
+      email: email,
+      password: password, 
+    }).then( res => {
+      console.log(res);
+
+      if(res && res.user){
+        setSigned(true);
+        setName(res.user.name);
+        AsyncStorage.setItem('@TOKEN_KEY', res. accessToken).then();
+      }else{
+        Alert.alert('Atenção', 'Usuário ou senha inválidos!');
+      }
+    });
+  }
+
+  // metodo usando o jasonserver
+
+/*   const handleLogin = ( ) => {
     login({
       email: email,
       password: password
@@ -30,7 +63,7 @@ const LoginOng = () => {
         Alert.alert('Atenção', 'Usuário ou senha inválidos!');
       }
     });
-  }
+  } */
 
   return (
     <>
@@ -42,13 +75,15 @@ const LoginOng = () => {
         <TextInput
           style={styles.input}
           label="E-mail"
-          value={email}
+          //value={email}
+          value={user.email}
           onChangeText={(text) => setEmail(text)}
         />
         <TextInput
           style={styles.input}
           label="Senha"
-          value={password}
+          //value={password}
+          value={user.password}
           secureTextEntry
           onChangeText={(text) => setPassword(text)}
         />
