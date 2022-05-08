@@ -15,7 +15,7 @@ Pode-se observar como evidência dessa funcionalidade o print em Registro de tes
 
 A tela de castrado da ONG tem como objetivo cadastrar a Ong. Para a estrutura de dados foi utilizado o React Native e JSON. Atendendo o Requisito Funcional 01.
 
-![Inicial Ong](img/FuncCadOng.png)
+![Inicial Ong](img/FuncCadOng1.png)
 
 Pode-se observar como evidência dessa funcionalidade o print em Registro de testes (RT2), bem como o utilização do CRUD solicitado para implementação. Na Branch develop e database você encontrará os códigos referente a essa funcionalidade.
 
