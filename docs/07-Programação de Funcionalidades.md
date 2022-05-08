@@ -5,9 +5,21 @@ Nesta seção é apresentada as telas da Aplicação e as funcionalidades do sis
 
 ## Tela – Login Ong 
 
-A tela de login da ONG tem como objetivo validar o usuário, possibilitando-o também recuperar a senha e caso não tenha cadastro se cadastrar. Após login ela leva o usuário para a tela inicial da Ong. Para a estrutura de dados foi utilizado o React Native e JSON. Atendendo o Requisito Funcional 02.. 
+A tela de login da ONG tem como objetivo validar o usuário, possibilitando-o também recuperar a senha e caso não tenha cadastro se cadastrar. Após login ela leva o usuário para a tela inicial da Ong. Para a estrutura de dados foi utilizado o React Native e JSON. Atendendo o Requisito Funcional 02.
 
 ![Login Ong](img/FuncCadOng.png)
+
+Pode-se observar como evidência dessa funcionalidade o print em Registro de testes (RT1), bem como o a autenticação no do Login. Na Branch develop e database você encontrará os códigos referente a essa funcionalidade.
+
+## Tela - Cadastro Ong
+
+A tela de castrado da ONG tem como objetivo cadastrar a Ong. Para a estrutura de dados foi utilizado o React Native e JSON. Atendendo o Requisito Funcional 01.
+
+![Inicial Ong](img/FuncCadOng.png)
+
+Pode-se observar como evidência dessa funcionalidade o print em Registro de testes (RT2), bem como o utilização do CRUD solicitado para implementação. Na Branch develop e database você encontrará os códigos referente a essa funcionalidade.
+
+![Evidência CRUD](img/EvidenciaONGCRUD.png)
 
 ## Tela – Inicial da Ong 
 
