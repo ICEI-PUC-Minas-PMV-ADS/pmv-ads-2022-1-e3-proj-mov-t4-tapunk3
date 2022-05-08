@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -12,11 +12,13 @@ import {
 import { Title, TextInput, Button } from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
 
-import { register } from '../services/authService';
+import { insertOng } from '../services/ongService';
+import { cadUser } from '../services/localLoginService';
 
 const OngEntrar = () => {
 
   const navigation = useNavigation();
+  const { item } = route.params ? route.params : {}; // utilizado no sqllite
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -32,9 +34,39 @@ const OngEntrar = () => {
   //const [text, setText] = React.useState('');
   const [caixa, onChangeText] = React.useState('Quem Somos.');
 
+  // usado no sqlite
+  const [user, setUser] = useState([]);
+
+  useEffect(() => {
+    if(item){
+      setName;
+      setEmail;
+      setPassword;
+      setLogadouro;
+      setCidade;
+      setCep;
+    }
+  }, [item]);
+
   const handleRegister = () => {
 
-    register({
+    if(item){
+      cadUser({
+        name: name,
+        email: email,
+        password: password,
+        logadouro: logadouro,
+        cidade: cidade,
+        cep: cep
+      }).then();
+    }else {
+      Alert.alert('Atençao', 'Usuário não cadastrado!Tente novamente mais tarde :)');
+    }
+
+    navigation.goBack();
+
+    // implementaçao um
+ /*    cadUser({
       name: name,
       email: email,
       password: password,
@@ -52,9 +84,33 @@ const OngEntrar = () => {
       }else{
         Alert.alert('Atençao', 'Usuário não cadastrado!Tente novamente mais tarde :)');
       }
+    }); */
+
+  };
+
+  // metodo utilizando o webapi
+/*   const handleRegister = () => {
+
+    insertOng({
+      name: name,
+      logadouro: logadouro,
+      cidade: cidade,
+      cep: cep,
+      caixa:caixa
+    }).then(res => {
+      console.log(res);
+
+      if(res){
+
+        Alert.alert('Atenção', 'Usuário cadastrado com sucesso!', [
+          {test: "OK", onPress: () => navigation.goBack()}
+        ]);
+      }else{
+        Alert.alert('Atençao', 'Usuário não cadastrado!Tente novamente mais tarde :)');
+      }
     });
 
-  }
+  } */
 
   return (
     <>
@@ -68,7 +124,7 @@ const OngEntrar = () => {
           value={name}
           onChangeText={(text) => setName(text)}
         />
-        <TextInput
+{/*         <TextInput
           style={styles.caixa}
           label="Email"
           value={email}
@@ -79,7 +135,7 @@ const OngEntrar = () => {
           label="Senha"
           value={password}
           onChangeText={(text) => setPassword(text)}
-        />
+        /> */}
         <TextInput
           style={styles.caixa}
           label="Logadouro"

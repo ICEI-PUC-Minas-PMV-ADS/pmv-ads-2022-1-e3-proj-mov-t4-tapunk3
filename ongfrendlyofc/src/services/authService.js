@@ -1,5 +1,5 @@
-import API from './webapi.services';
-import { BASE_URL } from './urls';
+import API from './web_api';
+import { BASE_URL } from './url';
 
 export const register = async (param) => {
 

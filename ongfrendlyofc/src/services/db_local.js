@@ -6,7 +6,7 @@ const Database = {
         const db = SQLite.openDatabase('dblocal.db');
 
         db.transaction((tx) => {
-            tx.executeSql('create table if note exists local (email string primary key not null, password string not null)');
+            tx.executeSql('create table if note exists local (email string primary key not null, password string not null, name string not null, logadouro string not null, numero int not null, cidade string not null, cep string not null)');
         });
 
         const ExecuteQuery = (sql, params = []) => {

@@ -9,8 +9,6 @@ import { login } from '../services/authService';
 import { getUser, insertUser } from './localLoginService';
 
 import { useIsFocused } from '@react-navigation/native'; 
-import { getUnpackedSettings } from 'http2';
-
 
 const LoginOng = () => {
 
@@ -20,6 +18,7 @@ const LoginOng = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  // usado no sqllite
   const [user, setUser] = useState([]);
 
   useEffect(() => {
@@ -46,7 +45,7 @@ const LoginOng = () => {
     });
   }
 
-  // metodo usando o jasonserver
+  // metodo usando o jsonserver
 
 /*   const handleLogin = ( ) => {
     login({
