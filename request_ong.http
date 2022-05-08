@@ -7,7 +7,7 @@ content-type: application/json
 
 {
         "id": 1,
-        "nome": "Teste",
+        "name": "Teste",
         "email": "teste@teste.com",
         "logadouro": "rua teste",
         "numero": 1,
@@ -23,8 +23,7 @@ content-type: application/json
 
 {
         "id": 1,
-        "nome": "Teste",
-        "email": "teste@teste.com",
+        "name": "Teste",
         "logadouro": "rua teste",
         "numero": 1,
         "cidade": "teste",

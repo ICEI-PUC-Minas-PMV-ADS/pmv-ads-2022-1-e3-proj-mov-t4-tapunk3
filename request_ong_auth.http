@@ -18,8 +18,7 @@ Authorization: : Bearer {{TOKEN}}
 
 {
         "id": 1,
-        "nome": "Teste",
-        "email": "teste@teste.com",
+        "name": "Teste",
         "logadouro": "rua teste",
         "numero": 1,
         "cidade": "teste",
@@ -35,8 +34,7 @@ content-type: application/json
 
 {
         "id": 1,
-        "nome": "Teste",
-        "email": "teste@teste.com",
+        "name": "Teste",
         "logadouro": "rua teste",
         "numero": 1,
         "cidade": "teste",
