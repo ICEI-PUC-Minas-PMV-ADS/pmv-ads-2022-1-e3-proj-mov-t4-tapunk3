@@ -1,0 +1,124 @@
+import React, {useState} from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  SafeAreaView,
+  StatusBar,
+  TouchableOpacity,
+  Alert,
+} from 'react-native';
+import { Title, TextInput, Button } from 'react-native-paper';
+import {useNavigation} from '@react-navigation/native';
+import {useUser} from '../contexts/UserContext';
+
+
+import { register } from '../services/authService';
+
+const OngCadLogin = () => {
+
+  const navigation = useNavigation();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleRegister = () => {
+
+    register({
+      email: email,
+      password: password,
+    }).then(res => {
+      console.log(res);
+
+      if(res){
+
+        Alert.alert('Atenção', 'Usuário registrado com sucesso!', [
+          {test: "OK", onPress: () => navigation.goBack()}
+        ]);
+      }else{
+        Alert.alert('Atençao', 'Usuário não registrado!Tente novamente mais tarde :)');
+      }
+    });
+  }
+
+  return (
+    <>
+      <View>
+        <Title style={styles.title}>Registre sua Ong para logar</Title>
+      </View>
+      <View style={styles.body}>
+        <TextInput
+          style={styles.caixa}
+          label="Email"
+          value={email}
+          onChangeText={(text) => setEmail(text)}
+        />
+        <TextInput
+          style={styles.caixa}
+          label="Senha"
+          value={password}
+          onChangeText={(text) => setPassword(text)}
+        />
+        <SafeAreaView>          
+        </SafeAreaView>
+      </View>
+      <View>
+        <Button
+          style={styles.cadastrar}
+          mode="contained"
+          onPress={handleRegister}>
+          Cadastrar Ong
+        </Button>
+        <Button
+          style={styles.cadastrar}
+          mode="contained"
+          onPress={() => navigation.goBack()}>
+          Cancelar
+        </Button>
+      </View>
+    </>
+  );
+};
+const styles = StyleSheet.create({
+  title: {
+    flex: 1,
+    textAlign: 'center',
+    marginTop: 10,
+  },
+  body: {
+    flex: 1,
+    padding: 2,
+    backgroundColor: '#808080',
+    margin: 10,
+  },
+  caixa: {
+    height: 40,
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    paddingBottom: 20,
+    margin: 10,
+    textAlign: 'center',
+  },
+  
+  container: {
+    margin: 10,
+  },
+  text: {
+    fontSize: 15,
+    margin: 10,
+    height:150,
+     
+  },
+  
+  cadastrar: {
+    width: 180,
+    height: 30,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginTop: 10,
+    backgroundColor: '#808080',
+  },
+});
+
+export default OngCadLogin;
