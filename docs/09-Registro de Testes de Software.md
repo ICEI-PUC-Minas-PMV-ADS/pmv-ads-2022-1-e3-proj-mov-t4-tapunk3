@@ -5,6 +5,8 @@ Os resultados obtidos nos testes de Software estão descritos a seguir.
 
 ![Registro de Caso de teste 1](img/RT1.png)
 
+|     Evidências  RT1                   |   ![Registro evidência](img/EvidenciaRegistroInfoONG.png)                                                          |
+|---------------------------------|-------------------------------------------------------------------------------------------|
 |Evidências  RT1    | ![Registro evidência](img/EvidenciaRegistroInfoONG.png)  |
                     | ![Registro evidência](img/EvidenciaRegistroONGBD.png)  |
 
