@@ -17,8 +17,7 @@ A tela de castrado da ONG tem como objetivo cadastrar a Ong. Para a estrutura de
 
 ![Inicial Ong](img/FuncCadOng1.png)
 
-Pode-se observar como evidência dessa funcionalidade o print em Registro de testes (RT2), bem como o utilização do CRUD solicitado para implementação. Na Branch develop e database você encontrará os códigos referente a essa funcionalidade.
-
+Pode-se observar como evidência dessa funcionalidade o print em Registro de testes (RT2). Na Branch develop e database você encontrará os códigos referente a essa funcionalidade, porém como solicitado segue abaixo a o utilização do CRUD para implementação.
 ![Evidência CRUD](img/EvidenciaONGCRUD.png)
 
 ## Tela – Inicial da Ong 
