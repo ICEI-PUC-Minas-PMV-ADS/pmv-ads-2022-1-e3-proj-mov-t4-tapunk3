@@ -1,6 +1,6 @@
 # Programação de Funcionalidades
 
-Nesta seção é apresentada as telas da Aplicação e as funcinalidades do sistema conforme os requisitos funcionais e/ou não funcionais. Projeto ainda em fase de desenvolvimento.
+Nesta seção é apresentada as telas da Aplicação e as funcionalidades do sistema conforme os requisitos funcionais e/ou não funcionais. Projeto ainda em fase de desenvolvimento.
 
 
 ## Tela – Login Ong 
