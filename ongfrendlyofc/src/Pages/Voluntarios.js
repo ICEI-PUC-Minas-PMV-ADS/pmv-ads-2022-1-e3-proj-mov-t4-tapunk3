@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 import { Searchbar, Button } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+
 
 import Estilos from '../components/Estilos';
 import Body from '../components/body';
 import Header from '../components/Header';
 
 const Voluntario = () => {
+  const navigation = useNavigation();
   const [searchQuery, setSearchQuery] =useState('');
 
   const onChangeSearch = (query) => setSearchQuery(query);
@@ -27,7 +30,7 @@ const Voluntario = () => {
         <Button
           style={styles.button}
           mode="contained"
-          onPress={() => console.log('Pressed')}>
+          onPress={() => navigation.navigate('Atividade')}>
           Conhecer
         </Button>
         <Image

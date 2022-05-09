@@ -1,8 +1,11 @@
 import React from 'react';
 import { Text, StyleSheet, Image, View } from 'react-native';
 import { Title, Button } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
 
 const Atividade = () => {
+
+  const navigation = useNavigation();
   return (
     <View style={styles.body}>
       <Title style={styles.titleText}>Ong Friendly</Title>
@@ -18,7 +21,7 @@ const Atividade = () => {
           região da estação da Luz, venha nos conhecer.
         </Text>
         <View style={styles.button}>
-          <Button mode="contained" onPress={() => console.log('Pressed')}>
+          <Button mode="contained" onPress={() => navigation.navigate('Listar Atividades')}>
             Nossas Atividades
           </Button>
         </View>

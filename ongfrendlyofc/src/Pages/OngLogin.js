@@ -39,6 +39,7 @@ const LoginOng = () => {
         setSigned(true);
         setName(res.user.name);
         AsyncStorage.setItem('@TOKEN_KEY', res. accessToken).then();
+        navigation.navigate('Ong Atividade');
       }else{
         Alert.alert('Atenção', 'Usuário ou senha inválidos!');
       }

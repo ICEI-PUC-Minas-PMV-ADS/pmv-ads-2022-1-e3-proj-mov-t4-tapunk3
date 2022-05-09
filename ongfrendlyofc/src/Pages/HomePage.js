@@ -10,8 +10,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Estilos from '../components/Estilos';
 import Body from '../components/body';
 import Header from '../components/Header';
-import Ong from './OngLogin';
-import Voluntarios from './Voluntarios';
+
 
 function HomePage({navigation}){
   return (
