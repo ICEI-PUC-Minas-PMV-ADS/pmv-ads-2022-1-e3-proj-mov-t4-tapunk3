@@ -4,7 +4,7 @@ import { TextInput, Button } from 'react-native-paper';
 
 import  AsyncStorage  from '@react-native-async-storage/async-storage';
 import {useNavigation} from '@react-navigation/native';
-import {userUser} from 'Esperar a Thais';
+import {useUser} from '../contexts/UserContext';
 import { login } from '../services/authService';
 import { getUser, insertUser } from './localLoginService';
 
@@ -14,7 +14,7 @@ const LoginOng = () => {
 
   const navigation = useNavigation();
   const isFocused = useIsFocused();
-  const {setSigned, setName} = userUser();
+  const {setSigned, setName} = useUser();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -97,7 +97,7 @@ const LoginOng = () => {
           style={styles.button}
           icon="account"
           mode="text"
-          onPress={() => navigation.navigate('OngEntrar')}>
+          onPress={() => navigation.navigate('Ong cadastro Login')}>
           Cadastro
         </Button>
         <Button
