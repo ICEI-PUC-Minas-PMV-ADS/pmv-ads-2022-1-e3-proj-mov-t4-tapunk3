@@ -14,7 +14,7 @@ const LoginOng = () => {
 
   const navigation = useNavigation();
   const isFocused = useIsFocused();
-  const {setSigned, setName} = useUser();
+  //const {setSigned, setName} = useUser(); // este cara está quebrando a aplicaçao verificar com o monitor.
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
