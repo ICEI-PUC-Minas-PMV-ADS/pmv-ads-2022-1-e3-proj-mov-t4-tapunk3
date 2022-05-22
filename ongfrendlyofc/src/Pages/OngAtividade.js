@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { Button } from 'react-native-paper';
+import CadastrarAtv from './CadastrarAtv';
+import ListarAtv from './ListarAtv';
+import {useNavigation} from '@react-navigation/native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import {ongAtividade} from '../services/authService'
 
 const OngAtividade = () => {
+
+  const navigation = useNavigation();
+
   return (
     <>
       <View style={styles.foto}>
@@ -12,13 +23,13 @@ const OngAtividade = () => {
         <Button
           style={styles.button}
           mode="contained"
-          onPress={() => console.log('Pressed')}>
+          onPress={() => navigation.navigate('Cadastrar Atividades')}>
           Cadastrar Atividade
         </Button>
         <Button
           style={styles.button}
           mode="contained"
-          onPress={() => console.log('Pressed')}>
+          onPress={() => navigation.navigate('Listar Atividades')}>
           Listar Atividade
         </Button>
       </View>

@@ -1,88 +1,72 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Text, Button, Alert } from 'react-native';
 import { Title, TextInput } from 'react-native-paper';
+import {useNavigation} from '@react-navigation/native';
+import {useUser} from '../contexts/UserContext';
+import {registrarAtv} from '../services/authService';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const RegistrarAtv = () => {
-  const [text, setText] = React.useState('');
+
+  const navigation = useNavigation();
+  
+  const [name, setName] = useState('');
+  const [endereco, setEndereco] = useState('');
+  const [data, setData] = useState('');
+
+  const handleRegistrarAtv = () => {
+    registrarAtv({
+      name: name,
+      endereco: endereco,
+      data: data
+    }).then( res => {
+      console.log(res); 
+
+     /* if(res){
+          Alert.alert('Atenção', 'Atividade REGISTRADA com sucesso!'),[
+         { text: "OK", onPress: () => navigation.navigate('Listar Atividades') }]
+         
+      }else{
+        Alert.alert('Atenção', 'Atividade NÃO registrada, tente novamente, preencha todos os campos para prosseguir!');
+
+      }*/
+           
+    });
+  }
   return (
     <>
       <View style={styles.titulo}>
         <Title>Nossas Atividades</Title>
       </View>
+      
       <View style={styles.body}>
         <TextInput
           //.label="Atividade"
-          value={text}
-          onChangeText={(text) => setText(text)}
+          value={name}
+          onChangeText={(text) => setName(text)}
         />
         <Text style={styles.texto}>Atividade</Text>
         <TextInput
           //.label="Endereço"
-          value={text}
-          onChangeText={(text) => setText(text)}
+          value={endereco}
+          onChangeText={(text) => setEndereco(text)}
         />
         <Text style={styles.texto}>Endereço</Text>
         <TextInput
           //.label="Email"
-          value={text}
-          onChangeText={(text) => setText(text)}
+          value={data}
+          onChangeText={(text) => setData(text)}
         />
         <Text style={styles.texto}>Data</Text>
+        
         <Button
           style={styles.button}
           title="Registar"
-          onPress={() => Alert.alert('Cannot press this one')}
+          onPress= {handleRegistrarAtv}
         />
-      </View>
-      <View style={styles.body}>
-        <TextInput
-          //.label="Atividade"
-          value={text}
-          onChangeText={(text) => setText(text)}
-        />
-        <Text style={styles.texto}>Atividade</Text>
-        <TextInput
-          //.label="Endereço"
-          value={text}
-          onChangeText={(text) => setText(text)}
-        />
-        <Text style={styles.texto}>Endereço</Text>
-        <TextInput
-          //.label="Email"
-          value={text}
-          onChangeText={(text) => setText(text)}
-        />
-        <Text style={styles.texto}>Data</Text>
-        <Button
-          style={styles.button}
-          title="Registar"
-          onPress={() => Alert.alert('Cannot press this one')}
-        />
-      </View>
-      <View style={styles.body}>
-        <TextInput
-          //.label="Atividade"
-          value={text}
-          onChangeText={(text) => setText(text)}
-        />
-        <Text style={styles.texto}>Atividade</Text>
-        <TextInput
-          //.label="Endereço"
-          value={text}
-          onChangeText={(text) => setText(text)}
-        />
-        <Text style={styles.texto}>Endereço</Text>
-        <TextInput
-          //.label="Email"
-          value={text}
-          onChangeText={(text) => setText(text)}
-        />
-        <Text style={styles.texto}>Data</Text>
-        <Button
-          style={styles.button}
-          title="Registar"
-          onPress={() => Alert.alert('Cannot press this one')}
-        />
+              
       </View>
     </>
   );

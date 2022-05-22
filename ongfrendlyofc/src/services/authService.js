@@ -3,14 +3,20 @@ import { BASE_URL } from './url';
 
 export const register = async (param) => {
 
-    return await API.post(`${BASE_URL}/register`, param)
-        .then((response) => {
-            return response.data;
-        })
-        .catch((error) => {
-            console.log(error);
-            return null;
-        });
+  try{
+    return await API.post(`${BASE_URL}/register`, param).then( 
+      response => {
+        return response.data;
+      },
+      error =>{
+        console.log(error);
+        return  null;
+      }
+    );
+  }catch(error){
+    console.log(error);
+    return null;
+  }
 }
 
 export const login = async (param) => {
@@ -24,3 +30,28 @@ export const login = async (param) => {
             return null;
         });
 }
+export const registrarAtv = async (param) => {
+
+    return await API.post(`${BASE_URL}/RegistrarAtv`, param)
+        .then((response) => {
+            return response.data;
+        })
+        .catch((error) => {
+            console.log(error);
+            return null;
+        }); 
+     
+}
+export const atividade = async (param) => {
+
+    return await API.post(`${BASE_URL}/Atividade`, param)
+        .then((response) => {
+            return response.data;
+        })
+        .catch((error) => {
+            console.log(error);
+            return null;
+        }); 
+     
+}
+
