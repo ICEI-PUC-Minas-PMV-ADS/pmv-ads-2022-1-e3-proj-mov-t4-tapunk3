@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { Button } from 'react-native-paper';
-import CadastrarAtv from './CadastrarAtv';
-import ListarAtv from './ListarAtv';
+
 import {useNavigation} from '@react-navigation/native';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-import {ongAtividade} from '../services/authService'
 
 const OngAtividade = () => {
 
-  const navigation = useNavigation();
+    const navigation = useNavigation();
+
+  const handleAtividade = () => {
+    
+  }
+
 
   return (
     <>
@@ -23,14 +23,20 @@ const OngAtividade = () => {
         <Button
           style={styles.button}
           mode="contained"
-          onPress={() => navigation.navigate('Cadastrar Atividades')}>
+          onPress={() => navigation.navigate('CadastrarAtividades')}>
           Cadastrar Atividade
         </Button>
         <Button
           style={styles.button}
           mode="contained"
-          onPress={() => navigation.navigate('Listar Atividades')}>
+          onPress={() => navigation.navigate('ListarAtividades')}>
           Listar Atividade
+        </Button>
+        <Button
+          style={styles.button}
+          mode="contained"
+          onPress={() => navigation.navigate('CadInformacoesOng')}>
+          Cadastro Ong
         </Button>
       </View>
     </>
