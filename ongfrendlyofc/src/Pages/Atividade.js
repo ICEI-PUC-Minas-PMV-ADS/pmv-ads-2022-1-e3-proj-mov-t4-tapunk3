@@ -1,7 +1,11 @@
 import React from 'react';
 import { Text, StyleSheet, Image, View } from 'react-native';
 import { Title, Button } from 'react-native-paper';
+import Voluntarios from './Voluntarios';
 import { useNavigation } from '@react-navigation/native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Atividade = () => {
 
@@ -21,7 +25,7 @@ const Atividade = () => {
           região da estação da Luz, venha nos conhecer.
         </Text>
         <View style={styles.button}>
-          <Button mode="contained" onPress={() => navigation.navigate('Listar Atividades')}>
+          <Button mode="contained" onPress={() => navigation.navigate('Voluntarios')}>
             Nossas Atividades
           </Button>
         </View>
