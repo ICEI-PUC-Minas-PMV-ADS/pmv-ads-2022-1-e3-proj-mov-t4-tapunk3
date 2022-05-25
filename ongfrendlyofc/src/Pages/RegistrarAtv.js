@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, Button, Alert } from 'react-native';
 import { Title, TextInput } from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
 import {useUser} from '../contexts/UserContext';
-import {registrarAtv} from '../services/authService';
+import {insertAtividades} from '../services/atividadeService';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -17,12 +17,14 @@ const RegistrarAtv = () => {
   const [data, setData] = useState('');
 
   const handleRegistrarAtv = () => {
-    registrarAtv({
+    insertAtividades({
       name: name,
       endereco: endereco,
       data: data
     }).then( res => {
-      console.log(res); 
+      console.log(res);
+      navigation.navigate('OngEntrar');
+      //navigation.goBack();
 
      /* if(res){
           Alert.alert('Atenção', 'Atividade REGISTRADA com sucesso!'),[

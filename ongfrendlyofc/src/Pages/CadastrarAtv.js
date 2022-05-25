@@ -1,11 +1,38 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
+import {useNavigation} from '@react-navigation/native';
+import {insertAtividades} from '../services/atividadeService';
+
 
 const CadastrarAtv = () => {
+  const navigation = useNavigation();
+
   const [nome, setNome] = useState('');
   const [data, setData] = useState('');
   const [numvol, setNumvol] = useState('');
+
+  
+  const handleCadastrarAtv = () => {
+    insertAtividades({
+      name: nome,
+      numvol: numvol,
+      data: data
+    }).then( res => {
+      console.log(res);
+      navigation.navigate('Listar Atividades') 
+
+     /* if(res){
+          Alert.alert('Atenção', 'Atividade REGISTRADA com sucesso!'),[
+         { text: "OK", onPress: () => navigation.navigate('Listar Atividades') }]
+         
+      }else{
+        Alert.alert('Atenção', 'Atividade NÃO registrada, tente novamente, preencha todos os campos para prosseguir!');
+
+      }*/
+           
+    });
+  }
 
   return (
     <>
@@ -32,8 +59,14 @@ const CadastrarAtv = () => {
       <Button 
         style={styles.button}
         mode="contained" 
-        onPress={() => console.log('Pressed')}>
+        onPress={handleCadastrarAtv}>
         Cadastrar Atividade
+      </Button>
+      <Button 
+        style={styles.button}
+        mode="contained" 
+        onPress={() => navigation.goBack()}>
+        Cancelar
       </Button>
     </>
   );

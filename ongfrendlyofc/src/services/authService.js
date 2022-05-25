@@ -30,28 +30,3 @@ export const login = async (param) => {
             return null;
         });
 }
-export const registrarAtv = async (param) => {
-
-    return await API.post(`${BASE_URL}/RegistrarAtv`, param)
-        .then((response) => {
-            return response.data;
-        })
-        .catch((error) => {
-            console.log(error);
-            return null;
-        }); 
-     
-}
-export const atividade = async (param) => {
-
-    return await API.post(`${BASE_URL}/Atividade`, param)
-        .then((response) => {
-            return response.data;
-        })
-        .catch((error) => {
-            console.log(error);
-            return null;
-        }); 
-     
-}
-
