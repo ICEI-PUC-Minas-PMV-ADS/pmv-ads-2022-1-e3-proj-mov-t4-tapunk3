@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -12,64 +12,27 @@ import {
 import { Title, TextInput, Button } from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
 
-import { insertOng } from '../services/ongService';
-import { cadUser } from '../services/localLoginService';
+import { register } from '../services/authService';
+import { insertOng } from '../services/ongService'
 
 const OngEntrar = () => {
 
   const navigation = useNavigation();
-  const { item } = route.params ? route.params : {}; // utilizado no sqllite
 
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [logadouro, setLogadouro] = useState('');
+  const [numero, setNumero] = useState('');
   const [cidade, setCidade] = useState('');
   const [cep, setCep] = useState('');
-
-
-  const [numero, setNumero] = useState('');
 
 
   //const [text, setText] = React.useState('');
   const [caixa, onChangeText] = React.useState('Quem Somos.');
 
-  // usado no sqlite
-  const [user, setUser] = useState([]);
-
-  useEffect(() => {
-    if(item){
-      setName;
-      setEmail;
-      setPassword;
-      setLogadouro;
-      setCidade;
-      setCep;
-    }
-  }, [item]);
-
   const handleRegister = () => {
 
-    if(item){
-      cadUser({
-        name: name,
-        email: email,
-        password: password,
-        logadouro: logadouro,
-        cidade: cidade,
-        cep: cep
-      }).then();
-    }else {
-      Alert.alert('Atençao', 'Usuário não cadastrado!Tente novamente mais tarde :)');
-    }
-
-    navigation.goBack();
-
-    // implementaçao um
- /*    cadUser({
+    insertOng({
       name: name,
-      email: email,
-      password: password,
       logadouro: logadouro,
       cidade: cidade,
       cep: cep
@@ -84,33 +47,9 @@ const OngEntrar = () => {
       }else{
         Alert.alert('Atençao', 'Usuário não cadastrado!Tente novamente mais tarde :)');
       }
-    }); */
-
-  };
-
-  // metodo utilizando o webapi
-/*   const handleRegister = () => {
-
-    insertOng({
-      name: name,
-      logadouro: logadouro,
-      cidade: cidade,
-      cep: cep,
-      caixa:caixa
-    }).then(res => {
-      console.log(res);
-
-      if(res){
-
-        Alert.alert('Atenção', 'Usuário cadastrado com sucesso!', [
-          {test: "OK", onPress: () => navigation.goBack()}
-        ]);
-      }else{
-        Alert.alert('Atençao', 'Usuário não cadastrado!Tente novamente mais tarde :)');
-      }
     });
 
-  } */
+  }
 
   return (
     <>
@@ -124,18 +63,6 @@ const OngEntrar = () => {
           value={name}
           onChangeText={(text) => setName(text)}
         />
-{/*         <TextInput
-          style={styles.caixa}
-          label="Email"
-          value={email}
-          onChangeText={(text) => setEmail(text)}
-        />
-        <TextInput
-          style={styles.caixa}
-          label="Senha"
-          value={password}
-          onChangeText={(text) => setPassword(text)}
-        /> */}
         <TextInput
           style={styles.caixa}
           label="Logadouro"

@@ -19,16 +19,16 @@ const LoginOng = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   // usado no sqllite
-  const [user, setUser] = useState([]);
+  //const [user, setUser] = useState([]);
 
-  useEffect(() => {
+/*   useEffect(() => {
     getUser().then(dados => {
       console.log(dados);
       setUser(dados);
       });
   }, [isFocused]);
-
-  const handleLogin = ( ) => {
+ */
+/*   const handleLogin = ( ) => {
     insertUser({
       email: email,
       password: password, 
@@ -44,7 +44,7 @@ const LoginOng = () => {
         Alert.alert('Atenção', 'Usuário ou senha inválidos!');
       }
     });
-  }
+  } */
 
   // metodo usando o jsonserver
 
@@ -75,22 +75,22 @@ const LoginOng = () => {
         <TextInput
           style={styles.input}
           label="E-mail"
-          //value={email}
-          value={user.email}
+          value={email}
+          //value={user.email}
           onChangeText={(text) => setEmail(text)}
         />
         <TextInput
           style={styles.input}
           label="Senha"
-          //value={password}
-          value={user.password}
+          value={password}
+          //value={user.password}
           secureTextEntry
           onChangeText={(text) => setPassword(text)}
         />
         <Button
           style={styles.button}
           mode="contained"
-          onPress={handleLogin}>
+          onPress={() =>navigation.navigate('HomeOng')}>
           Entrar
         </Button>
         <Button
