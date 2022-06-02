@@ -22,13 +22,5 @@
       "descricao": "Cantinho do Doguinho"
     }
   ],
-  "atividades": [
-    {
-      "id": 1,
-      "nome": "Atividade Teste",
-      "data": "01/01/2022",
-      "nvoluntarios": 1,
-      "detalhesAtv" : "Lavar os cachorros"
-    }
-  ]
+  "atividades": []
 }
