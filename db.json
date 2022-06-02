@@ -1,5 +1,16 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "teste@teste.com",
+      "password": "$2a$10$2.ieGrLqfuw2douL6eyJr.G9gpbA9nJuQjiugCWjKk1czAxXjFHNK",
+      "id": 1
+    },
+    {
+      "email": "teste2@teste.com",
+      "password": "$2a$10$BTE3Ahhi/ikvnDz1MJF1mumFt499hUhySwAo/WOaCy9W5ROR1vy1K",
+      "id": 2
+    }
+  ],
   "ong": [
     {
       "id": 1,
@@ -16,7 +27,8 @@
       "id": 1,
       "nome": "Atividade Teste",
       "data": "01/01/2022",
-      "nvoluntarios": 1
+      "nvoluntarios": 1,
+      "detalhesAtv" : "Lavar os cachorros"
     }
   ]
 }
