@@ -12,7 +12,7 @@ import {useNavigation} from '@react-navigation/native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function HomePage({navigation}){
+function DetalhesAtv({navigation}){
   return (
     <Estilos>
       <Header text={'Ong Friendly'} />
@@ -34,7 +34,6 @@ function HomePage({navigation}){
     </Estilos>
   );
 }
-
 const styles = StyleSheet.create({
   button: {
     marginBottom: 10,
@@ -43,4 +42,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomePage;
+export default DetalhesAtv;

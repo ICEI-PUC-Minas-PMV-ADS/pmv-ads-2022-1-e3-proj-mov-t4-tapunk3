@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ong-friendly",
-    "slug": "snack-90662c66-f9a5-46a7-ba75-45a8bc7ed2b4",
+    "name": "surprised-chips",
+    "slug": "snack-12ceb3c1-f194-4d4c-8899-414f86397f6e",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -27,6 +27,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "teste1"
   }
 }

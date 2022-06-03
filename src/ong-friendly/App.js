@@ -1,20 +1,18 @@
-import React from 'react';
-import { TextInput, } from 'react-native-paper';
+import React, { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import UserProvider from './src/contexts/UserContext';
+import Route from './src/Navigations/Route';
 
+import Main from './src/Navigations/Main';
 
-import HomePage from './src/Pages/HomePage';
-
-
-const App = () => {
-  const [text, setText] = React.useState("");
-  return (
-    
-    <HomePage />
-  )
-  
-
-
-};
-  
+  const App = () =>{
+    return (
+    <UserProvider>
+      <NavigationContainer>
+        <Main />
+      </NavigationContainer>
+    </UserProvider>
+    );
+  };
 
 export default App;
