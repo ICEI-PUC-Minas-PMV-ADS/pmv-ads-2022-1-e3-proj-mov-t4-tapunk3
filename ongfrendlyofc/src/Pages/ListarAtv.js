@@ -1,109 +1,72 @@
-import React from 'react';
-import { StyleSheet, View, Text, Alert, Image } from 'react-native';
-import { TextInput, Button, Title } from 'react-native-paper';
+import React, {useEffect, useState} from 'react';
+import { StyleSheet, View, Text, Alert, Image, FlatList, SafeAreaView } from 'react-native';
+import { TextInput, Button, Title, FAB, List, Appbar } from 'react-native-paper';
 
-const ListarAtv = () => {
-  const [nome, setNome] = React.useState('');
-  const [data, setData] = React.useState('');
-  const [vol, setVol] = React.useState('');
+import HeaderAtv from '../components/HeaderAtv';
+import Body from '../components/body';
+import Container from '../components/Container';
+
+
+import {useNavigation} from '@react-navigation/native';
+import {getAtividades, deleteAtividades} from '../services/atividadeService';
+
+import {useIsFocused} from '@react-navigation/native';
+
+const ListarAtv = ({ route }) => {
+
+  const navigation = useNavigation();
+  const isFocused = useIsFocused();
+  const [listarAtv, setAtividades] = useState([]);
+    const { item } = route.params ? route.params : {};
+
+    useEffect(() => {
+    getAtividades().then(dados => {
+      console.log(dados);
+      setAtividades(dados);
+    });
+  }, [isFocused]);
+
+    const handleExcluir = () => {
+    deleteAtividades(item.id).then(res => {
+      navigation.goBack();
+    } );
+  };
+
+    const renderItem = ({ item }) => (
+    <List.Item 
+        title= {"Nome: " + item.name}
+        description={"Nº de voluntários: " + item.nvoluntarios}
+        left={(props) => (
+        <List.Icon
+          {...props}
+          color={'black'}
+          icon="book-open-variant"
+        />
+        )}
+      right={(props) => (
+        <Text {...props} style={{ alignSelf: 'center' }}>
+          {' '}
+          {item.data}{' '}
+        </Text>
+      )}
+    onPress={() => navigation.navigate('Detalhe da atividade', {item})}
+      />
+  );
 
   //.const bodyText = "Lista de Atividade";
   return (
-    <>
-      <View>
-        <Image
-          style={styles.foto}
-          source={require('../components/Logoong.PNG')}
-        />
-        <View style={styles.titulo}>
-          <Title>Lista de Atividades</Title>
-        </View>
-      </View>
-      <View style={styles.body}>
-        <TextInput
-          //.label="Atividade"
-          value={nome}
-          onChangeText={(text) => setNome(text)}
-        />
-        <Text style={styles.texto}>Nome</Text>
-        <TextInput
-          //.label="Endereço"
-          value={data}
-          onChangeText={(text) => setData(text)}
-        />
-        <Text style={styles.texto}>Data</Text>
-        <TextInput
-          //.label="Email"
-          value={vol}
-          onChangeText={(text) => setVol(text)}
-        />
-        <Text style={styles.texto}>Numero de Voluntários</Text>
-
-        <Button
-          style={styles.button}
-          icon="trash-can"
-          mode="contained"
-          onPress={() => console.log('Pressed')}>
-          Apagar Atividade
-        </Button>
-      </View>
-      <View style={styles.body}>
-        <TextInput
-          //.label="Atividade"
-          value={nome}
-          onChangeText={(text) => setNome(text)}
-        />
-        <Text style={styles.texto}>Nome</Text>
-        <TextInput
-          //.label="Endereço"
-          value={data}
-          onChangeText={(text) => setData(text)}
-        />
-        <Text style={styles.texto}>Data</Text>
-        <TextInput
-          //.label="Email"
-          value={vol}
-          onChangeText={(text) => setVol(text)}
-        />
-        <Text style={styles.texto}>Numero de Voluntários</Text>
-
-        <Button
-          style={styles.button}
-          icon="trash-can"
-          mode="contained"
-          onPress={() => console.log('Pressed')}>
-          Apagar Atividade
-        </Button>
-      </View>
-    </>
+    <Container>
+      <HeaderAtv title={'Atividades'}>
+      </HeaderAtv>
+      <Body>
+        <FlatList
+        data={listarAtv}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+      />
+      </Body>
+    </Container>
   );
 };
 
-const styles = StyleSheet.create({
-  foto: {
-    alignSelf: 'center',
-    marginTop: 10,
-    width: 200,
-    height: 150,
-  },
-  titulo: {
-    marginTop: 10,
-    alignItems: 'center',
-    fontWeight: 'bold',
-  },
-  body: {
-    margin: 8,
-    backgroundColor: '#808080',
-    padding: 15,
-  },
-  texto: {
-    fontWeight: 'bold',
-  },
-  button: {
-    flex: 1,
-    alignSelf: 'center',
-    justifyContent: 'center',
-    marginTop: 20,
-  },
-});
 export default ListarAtv;

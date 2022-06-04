@@ -11,7 +11,8 @@ import TelaInicialOng from '../Pages/telaInicialOng';
 import RegAtividade from '../Pages/RegistrarAtv';
 import OngLogin from '../Pages/OngLogin';
 import OngCadLogin from '../Pages/OngCadLogin'
-
+import DetalhesAtv from '../Pages/DetalhesAtv'
+import DetalhesOng from '../Pages/DetalhesOng'
 
 const Stack = createNativeStackNavigator();
 
@@ -24,12 +25,14 @@ const Main = () => {
             <Stack.Screen name="CadInformacoesOng" component={CadOngInformacoes} />
             <Stack.Screen name="Voluntarios" component={Voluntarios} />
             <Stack.Screen name="Atividade" component={Atividade} />
-            <Stack.Screen name="Cadastrar Atividades" component={CadAtividade} />
-            <Stack.Screen name="Listar Atividades" component={ListAtividade} />
+            <Stack.Screen name="CadastrarAtividades" component={CadAtividade} />
+            <Stack.Screen name="ListarAtividades" component={ListAtividade} />
             <Stack.Screen name="HomeOng" component={TelaInicialOng} />
             <Stack.Screen name="Registrar Atividade" component={RegAtividade} />
             <Stack.Screen name="OngLogin" component={OngLogin} />
             <Stack.Screen name="Ong cadastro Login" component={OngCadLogin} />
+            <Stack.Screen name="Detalhe da atividade" component={DetalhesAtv} />
+            <Stack.Screen name="DetalhesOng" component={DetalhesOng} />
         </Stack.Navigator>
     );
 }

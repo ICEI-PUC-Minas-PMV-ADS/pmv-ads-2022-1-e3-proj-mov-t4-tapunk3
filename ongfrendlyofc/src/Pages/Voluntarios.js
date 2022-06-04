@@ -1,77 +1,86 @@
-import React, {useState} from 'react';
-import { View, Image, StyleSheet } from 'react-native';
-import { Searchbar, Button } from 'react-native-paper';
-import { useNavigation } from '@react-navigation/native';
+import React, {useEffect, useState} from 'react';
+import { StyleSheet, View, Text, Alert, Image, FlatList, SafeAreaView } from 'react-native';
+import { TextInput, Button, Title, FAB, List, Appbar } from 'react-native-paper';
 
-
-import Estilos from '../components/Estilos';
+import HeaderAtv from '../components/HeaderAtv';
 import Body from '../components/body';
-import Header from '../components/Header';
+import Container from '../components/Container';
 
-const Voluntario = () => {
+
+import {useNavigation} from '@react-navigation/native';
+import {getOng } from '../services/ongService';
+import {useIsFocused} from '@react-navigation/native';
+
+const Voluntario  = ({ route }) => {
+
   const navigation = useNavigation();
-  const [searchQuery, setSearchQuery] =useState('');
+  const isFocused = useIsFocused();
+  const [ongLista, setOng] = useState([]);
+  const { item } = route.params ? route.params : {};
+  
+    useEffect(() => {
+    getOng().then(dados => {
+      console.log(dados);
+      setOng(dados);
+    });
+  }, [isFocused]);
 
-  const onChangeSearch = (query) => setSearchQuery(query);
 
-  return (
-    <>
-      <Searchbar
-        style={styles.pesquisa}
-        placeholder="Buscar"
-        onChangeText={onChangeSearch}
-        value={searchQuery}
+    const renderItem = ({ item }) => (
+    <List.Item 
+        title= {item.name}
+        description={"Quem Somos: " +  item.descricao}
+        left={(props) => (
+        <List.Icon
+          {...props}
+          color={'black'}
+        />
+        )}
+      right={(props) => (
+        <Text {...props} style={{ alignSelf: 'center' }}>
+          {' '}
+          {item.data}{' '}
+        </Text>
+      )}
+    onPress={() => navigation.navigate('DetalhesOng', {item})}
       />
-      <View>
-        <Image
-          style={styles.foto}
-          source={require('../components/Logoong.PNG')}
-        />
-        <Button
-          style={styles.button}
-          mode="contained"
-          onPress={() => navigation.navigate('Atividade')}>
-          Conhecer
-        </Button>
-        <Image
-          style={styles.foto}
-          source={require('../components/Logoong.PNG')}
-        />
-        <Button
-          style={styles.button}
-          mode="contained"
-          onPress={() => console.log('Pressed')}>
-          Conhecer
-        </Button>
-        <Image
-          style={styles.foto}
-          source={require('../components/Logoong.PNG')}
-        />
-        <Button
-          style={styles.button}
-          mode="contained"
-          onPress={() => console.log('Pressed')}>
-          Conhecer
-        </Button>
+  );
+
+  //.const bodyText = "Lista de Atividade";
+  return (
+    <Container>
+    <View>
+        <Title style={styles.title}>Nossas ONG</Title>
       </View>
-    </>
+      <Body>
+        <FlatList
+        data={ongLista}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+      />
+      </Body>
+    </Container>
   );
 };
-
 const styles = StyleSheet.create({
-  pesquisa: {
-    margin: 10,
+  title: {
+    flex: 1,
+    textAlign: 'center',
+    marginTop: 20,
   },
-  foto: {
-    margin: 20,
+    body: {
+    margin: 80,
+    marginTop: 20,
+    width: '90%',
     alignSelf: 'center',
-    width: 180,
-    height: 100,
+  },
+  input: {
+    margin: 1,
   },
   button: {
+    margin: 10,
+    width: '50%',
     alignSelf: 'center',
-    width: '40%',
-  },
+  }
 });
-
 export default Voluntario;

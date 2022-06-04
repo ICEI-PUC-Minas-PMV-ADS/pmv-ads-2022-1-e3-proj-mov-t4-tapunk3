@@ -11,10 +11,10 @@ import Body from '../components/body';
 
 import {useNavigation} from '@react-navigation/native';
 
-import {updateAtividades, insertAtividades} from '../services/atividadeService';
+import {updateAtividades, deleteAtividades} from '../services/atividadeService';
 
 
-const CadastrarAtv = ({ route }) => {
+const DetalhesAtv = ({ route }) => {
   const navigation = useNavigation();
   const { item } = route.params ? route.params : {};
 
@@ -24,36 +24,37 @@ const CadastrarAtv = ({ route }) => {
   const [nome, setNome] = useState('');
   const [nvoluntarios, setNvolutarios] = useState('');
   const [detalhesatv, setDetalhesatv] = useState('');
-  const [data, setData] = useState(moment(new Date()).format('DD/MM/YYYY'));
+  const [data, setData] = useState('');
     useEffect(() =>{
     if(item){
-      setNome(item.nome);
+      setNome(item.name);
       setNvolutarios(item.nvoluntarios);
       setDetalhesatv(item.detalhesatv);
       setData(item.data);
     }
   }, [item]);
 
-    const handleCadastrarAtv = () => {
-    insertAtividades({
-      name: nome,
-      detalhesatv: detalhesatv,
-      nvoluntarios: nvoluntarios,
-      data: data
+    const handleAtualizar = () => {
+      if(item){
+        updateAtividades({
+        name: nome,
+        detalhesatv: detalhesatv,
+        nvoluntarios: nvoluntarios,
+        data: data,
+        id: item.id
     }).then( res =>  {
       console.log(res);
-      navigation.navigate('ListarAtividades');
-
-      if(res){
-      Alert.alert('Atenção', 'Atividade REGISTRADA com sucesso!'),[
-         { text: "OK", onPress: () => navigation.navigate('Listar Atividades') }]
-         
-      }else{
-        Alert.alert('Atenção', 'Atividade NÃO registrada, tente novamente, preencha todos os campos para prosseguir!');
-
-      }
+      navigation.goBack();
     });
+      }
   }
+
+    const handleExcluir = () => {
+    deleteAtividades(item.id).then(res => {
+      navigation.goBack();
+    } );
+  };
+
 
   return (
     <>
@@ -86,14 +87,16 @@ const CadastrarAtv = ({ route }) => {
       <Button
         style={styles.button}
         mode="contained" 
-        onPress={handleCadastrarAtv}>
-        Cadastrar Atividade
+        onPress={handleAtualizar}>
+        Atualizar atividade
       </Button>
       <Button 
         style={styles.button}
         mode="contained" 
-        onPress={() => navigation.goBack()}>
-        Cancelar
+        color = 'red'
+        icon="trash-can"
+        onPress={handleExcluir}>
+        Excluir
       </Button>
     </>
   );
@@ -115,4 +118,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default CadastrarAtv;
+export default DetalhesAtv;
