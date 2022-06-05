@@ -22,7 +22,7 @@ Optamos por utilizar o Git Flow para a gestão do código fonte do software dese
 
 ## Gerenciamento de Projeto
 
-![Organograma](img/Organograma.png)
+![Organograma](img/Organograma2.png)
 
 O grupo irá utilizar o Scrum, pois tem uma gestão ágil de desenvolvimento de software, onde o projeto pode ser divido em ciclos. Com isso, conseguimos planejar o tempo que levamos para finalizar cada etapa do projeto de modo produtivo e eficaz, diminuindo o impacto das alterações no fluxo do processo alcançando os objetivos definidos durante a etapa de planejamento. A equipe está organizada conforme o organograma abaixo:  
 
