@@ -8,10 +8,10 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 
 ![Personas 1](img/Janei.png)
-![Personas 2](img/Carolina.png.png)
+![Personas 2](img/Carolina.png)
 ![Personas 3](img/Thais.png)
-![Personas 4](img/Beatriz.png.png)
-![Personas 5](img/Bastian.png.png)
+![Personas 4](img/Beatriz.png)
+![Personas 5](img/Bastian.png)
 
 
 ## Histórias de Usuários
