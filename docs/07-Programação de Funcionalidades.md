@@ -31,7 +31,7 @@ Está tela permite ao usuário logado listar as atividades da ong, cadastrar uma
 ![Inicial Ong](img/TelaInicialONG.png)
 
 
-## Tela - Cadastro Ong
+## Tela - Cadastro informações da Ong
 
 A tela de castrado da ONG tem como objetivo cadastrar as informações da Ong. Para a estrutura de dados foi utilizado o React Native e JSON. Atendendo o Requisito Funcional 01.
 
@@ -45,7 +45,7 @@ Na tela cadastro de atividades o usuário tipo Ong poderá cadastrar uma ativida
 ![cadastro de atividades](img/CadastrarAtv.png)
 
 
-## Tela – Lista de atividades da Ong 
+## Tela – Lista de atividades da Ong (Fluxo ONG)
 
 Nesta Tela de lista de atividades da Ong o usuário(ONG) terá a possibilidade de visualizar as atividades das ongs, ao clicar em uma atividade da lista o usuario poderá atualizar ou deletar a atividade cadastrada. Conforme fluxograma o botão voltar irá retornar para a página anterior a esta. Para a estrutura de dados foi utilizado o React Native e JSON. Atendendo o Requisito Funcional 06.
 
@@ -65,7 +65,8 @@ Ao clicar em uma Ong o usuário poderá ver os detalhes da mesma caso queria pod
 ![Lista de atividades da Ong](img/DetalheONG1.png)
 
 
-## Tela – Lista de atividades da Ong 
+## Tela – Lista de atividades da Ong (Fluxo Voluntário)
 Após o interesse do usu´pario na ONG o mesmo poderá ver as atividades cadastrada da mesma e se registar em alguma atividade, não há restrição na quantidade de atividades que o usuário pode se registrar. Ao clicar em se registrar ele será direcionado para o aplicativo de WhatsApp, do qual poderá entrar em contato com a ONG. Conforme fluxograma o botão voltar irá retornar para a página anterior a esta. Para a estrutura de dados foi utilizado o React Native e JSON. Atendendo o Requisito Funcional 06.
+
 ![Lista de atividades da Ong](img/FuncListaAtividades.png)
 
