@@ -18,7 +18,7 @@ Os resultados obtidos nos testes de Software estão descritos a seguir.
 ![Registro de Caso de teste 3](img/RT3.png)
 
 |     Evidências  RT3      |   ![Registro evidência](img/EvidenciaCadasAtiv1.png)  
-|---------------------------------------------------------------------------------------------------------------------|
+|--------------------------|-------------------------------------------------------------------------------------------|
          
          
 ![Registro evidência](img/EvidenciaCadasAtiv2.png)     
