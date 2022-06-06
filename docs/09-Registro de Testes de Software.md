@@ -35,5 +35,22 @@ Os resultados obtidos nos testes de Software estão descritos a seguir.
                                
                                ![Registro evidência](img/EvidenciaCadasAtivUpdate.png)
                       
-|--------------------------|-------------------------------------------------------------------------------------------|                      
+|--------------------------|-------------------------------------------------------------------------------------------|  
+
+![Registro de Caso de teste 4](img/RT4.png)
+
+|     Evidências  RT4      |   ![Registro evidência](img/EvidenciaVisuAtiviONG.png)  
+|--------------------------|-------------------------------------------------------------------------------------------|
+
+
+![Registro de Caso de teste 5](img/RT5.png)
+
+|     Evidências  RT5      |   ![Registro evidência](img/EvidenciaVisuaInfoONG.png)  
+|--------------------------|-------------------------------------------------------------------------------------------|
+
+
+![Registro de Caso de teste 6](img/RT6.png)
+
+|     Evidências  RT6      |   ![Registro evidência](img/EvidenciaVisuAtiviVolu6.png)  
+|--------------------------|-------------------------------------------------------------------------------------------|
                                
