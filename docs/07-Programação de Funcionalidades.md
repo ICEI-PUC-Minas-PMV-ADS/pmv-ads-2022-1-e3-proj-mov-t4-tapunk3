@@ -62,7 +62,7 @@ Nesta Tela o usuário interessado em se voluntariar terá acesso a uma lista de 
 ## Tela – Detalhe da Ong 
 Ao clicar em uma Ong o usuário poderá ver os detalhes da mesma caso queria poderá seguir adiante vendo as atividades desta ONG. Conforme fluxograma o botão voltar irá retornar para a página anterior a esta. Para a estrutura de dados foi utilizado o React Native e JSON. Atendendo o Requisito Funcional 06.
 
-![Lista de atividades da Ong](img/DetalheONG.png)
+![Lista de atividades da Ong](img/DetalhesONG.png)
 
 
 ## Tela – Lista de atividades da Ong 
