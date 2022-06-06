@@ -20,23 +20,23 @@ Os resultados obtidos nos testes de Software estão descritos a seguir.
 |     Evidências  RT3      |   ![Registro evidência](img/EvidenciaCadasAtiv1.png)  
 |--------------------------|-------------------------------------------------------------------------------------------|
 
-      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtiv2.png)
-|--------------------------|-------------------------------------------------------------------------------------------|    
+          ![Registro evidência](img/EvidenciaCadasAtiv2.png)
 
-      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtiv3.png)
-|--------------------------|-------------------------------------------------------------------------------------------|    
 
-      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtiv4.png)
-|--------------------------|-------------------------------------------------------------------------------------------|    
+          ![Registro evidência](img/EvidenciaCadasAtiv3.png)
 
-      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtiv5.png)
-|--------------------------|-------------------------------------------------------------------------------------------| 
 
-      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtivDelet3.png)
-|--------------------------|-------------------------------------------------------------------------------------------|       
+          ![Registro evidência](img/EvidenciaCadasAtiv4.png)
+   
 
-      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtivUpdate.png)
-|--------------------------|-------------------------------------------------------------------------------------------|  
+          ![Registro evidência](img/EvidenciaCadasAtiv5.png)
+
+
+          ![Registro evidência](img/EvidenciaCadasAtivDelet3.png)
+     
+
+          ![Registro evidência](img/EvidenciaCadasAtivUpdate.png)
+
 
 
 ![Registro de Caso de teste 4](img/RT4.png)
