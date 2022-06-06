@@ -5,7 +5,7 @@ Os resultados obtidos nos testes de Software estão descritos a seguir.
 
 ![Registro de Caso de teste 1](img/RT1.png)
 
-|     Evidências  RT1      |   ![Registro evidência](img/EvidenciaCadONG.png)                                                          |
+|     Evidências  RT1      |   ![Registro evidência](img/EvidenciaCadONG.png)                                          |
 |--------------------------|-------------------------------------------------------------------------------------------|
  
 
@@ -19,17 +19,23 @@ Os resultados obtidos nos testes de Software estão descritos a seguir.
 
 |     Evidências  RT3      |   ![Registro evidência](img/EvidenciaCadasAtiv1.png)  
 |--------------------------|-------------------------------------------------------------------------------------------|
-                               ![Registro evidência](img/EvidenciaCadasAtiv2.png) 
-|--------------------------|-------------------------------------------------------------------------------------------|                                              
-                               ![Registro evidência](img/EvidenciaCadasAtiv3.png) 
-|--------------------------|-------------------------------------------------------------------------------------------|                              
-                               ![Registro evidência](img/EvidenciaCadasAtiv4.png)
-|--------------------------|-------------------------------------------------------------------------------------------|                              
-                               ![Registro evidência](img/EvidenciaCadasAtiv5.png)
-|--------------------------|-------------------------------------------------------------------------------------------|                              
-                               ![Registro evidência](img/EvidenciaCadasAtivDelet3.png)
-|--------------------------|-------------------------------------------------------------------------------------------|                               
-                               ![Registro evidência](img/EvidenciaCadasAtivUpdate.png)
+
+      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtiv2.png)
+|--------------------------|-------------------------------------------------------------------------------------------|    
+
+      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtiv3.png)
+|--------------------------|-------------------------------------------------------------------------------------------|    
+
+      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtiv4.png)
+|--------------------------|-------------------------------------------------------------------------------------------|    
+
+      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtiv5.png)
+|--------------------------|-------------------------------------------------------------------------------------------| 
+
+      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtivDelet3.png)
+|--------------------------|-------------------------------------------------------------------------------------------|       
+
+      Evidências  RT3          ![Registro evidência](img/EvidenciaCadasAtivUpdate.png)
 |--------------------------|-------------------------------------------------------------------------------------------|  
 
 
