@@ -28,10 +28,8 @@ Os resultados obtidos nos testes de Software estão descritos a seguir.
                                ![Registro evidência](img/EvidenciaCadasAtiv5.png)
 |--------------------------|-------------------------------------------------------------------------------------------|                              
                                ![Registro evidência](img/EvidenciaCadasAtivDelet3.png)
-                                Deletar Atividade
 |--------------------------|-------------------------------------------------------------------------------------------|                               
                                ![Registro evidência](img/EvidenciaCadasAtivUpdate.png)
-                                Atualizar Atividade
 |--------------------------|-------------------------------------------------------------------------------------------|  
 
 
