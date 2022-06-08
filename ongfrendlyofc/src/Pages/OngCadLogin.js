@@ -15,6 +15,7 @@ import {useUser} from '../contexts/UserContext';
 
 
 import { register } from '../services/authService';
+//import { insertUser} from '../services/localLoginService'
 
 const OngCadLogin = () => {
 
@@ -30,6 +31,7 @@ const OngCadLogin = () => {
       password: password,
     }).then(res => {
       console.log(res);
+      navigation.navigate('OngLogin');
 
       if(res){
 
@@ -49,15 +51,17 @@ const OngCadLogin = () => {
       </View>
       <View style={styles.body}>
         <TextInput
-          style={styles.caixa}
+          style={styles.input}
           label="Email"
           value={email}
+          left={<TextInput.Icon name="account"/>}
           onChangeText={(text) => setEmail(text)}
         />
         <TextInput
-          style={styles.caixa}
+          style={styles.input}
           label="Senha"
           value={password}
+          left={<TextInput.Icon name="key" />}
           onChangeText={(text) => setPassword(text)}
         />
         <SafeAreaView>          
@@ -65,13 +69,13 @@ const OngCadLogin = () => {
       </View>
       <View>
         <Button
-          style={styles.cadastrar}
+          style={styles.button}
           mode="contained"
           onPress={handleRegister}>
-          Cadastrar Ong
+          Cadastrar
         </Button>
         <Button
-          style={styles.cadastrar}
+          style={styles.button}
           mode="contained"
           onPress={() => navigation.goBack()}>
           Cancelar
@@ -92,15 +96,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#808080',
     margin: 10,
   },
-  caixa: {
-    height: 40,
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-    paddingBottom: 20,
-    margin: 10,
-    textAlign: 'center',
+  input: {
+    margin: 1,
   },
-  
   container: {
     margin: 10,
   },
@@ -110,15 +108,12 @@ const styles = StyleSheet.create({
     height:150,
      
   },
-  
-  cadastrar: {
-    width: 180,
-    height: 30,
-    justifyContent: 'center',
+
+    button: {
+    margin: 10,
+    width: '50%',
     alignSelf: 'center',
-    marginTop: 10,
-    backgroundColor: '#808080',
-  },
+  }
 });
 
 export default OngCadLogin;

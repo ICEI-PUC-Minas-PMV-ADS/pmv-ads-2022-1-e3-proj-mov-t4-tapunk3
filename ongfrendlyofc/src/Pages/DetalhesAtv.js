@@ -25,6 +25,7 @@ const DetalhesAtv = ({ route }) => {
   const [nvoluntarios, setNvolutarios] = useState('');
   const [detalhesatv, setDetalhesatv] = useState('');
   const [data, setData] = useState('');
+  
     useEffect(() =>{
     if(item){
       setNome(item.name);
@@ -33,6 +34,9 @@ const DetalhesAtv = ({ route }) => {
       setData(item.data);
     }
   }, [item]);
+
+ const teste = item;
+ console.log('passei aqui: ', teste.name)
 
     const handleAtualizar = () => {
       if(item){
@@ -43,7 +47,7 @@ const DetalhesAtv = ({ route }) => {
         data: data,
         id: item.id
     }).then( res =>  {
-      console.log(res);
+      console.log(res, 'Detalhes da atividade');
       navigation.goBack();
     });
       }

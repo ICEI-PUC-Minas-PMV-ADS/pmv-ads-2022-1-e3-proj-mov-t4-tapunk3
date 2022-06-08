@@ -19,17 +19,23 @@ const DetalhesOng = ({ route }) => {
 
   const [nome, setNome] = useState('');
   const [cidade, setCidade] = useState('');
+  const [logadouro, setLogadouro] = useState ('');
+  const [numero, setNumero] = useState ('');
   const [descricao, setDescricao] = useState('');
 
     useEffect(() =>{
     if(item){
       setNome(item.name);
       setCidade(item.cidade);
+      setLogadouro(item.logadouro);
+      setNumero(item.numero);
       setDescricao(item.descricao);
     }
   }, [item]);
 
-    const handleGetOng = () => {
+   const teste = item;
+    
+    /*const handleGetOng = () => {
       if(item){
         getOng({
         name: nome,
@@ -39,42 +45,31 @@ const DetalhesOng = ({ route }) => {
       console.log(res);
     });
       }
-  }
+  }*/
 
 
   return (
     <Container>
           <Card>
             <Card.Content>
-            <Title title= {nome} />
-            <Paragraph>Card content</Paragraph>
+            <Title/>
+            <Paragraph>Nome: {teste.name}</Paragraph>
+            <Paragraph>Quem somos: {teste.descricao}</Paragraph>
+            <Paragraph>Endereço: {teste.logadouro}{teste.numero}</Paragraph>
+            <Paragraph>Cidade: {teste.cidade}</Paragraph>
             </Card.Content>
           </Card>
 
         <Button
         style={styles.button}
         mode="contained" 
-        onPress={console.log}>
+        onPress={() => navigation.navigate('Atividades da Ong', {item} )}>
         Nossas Atividades
       </Button>
     </Container>
   );
 };
 const styles = StyleSheet.create({
-  title: {
-    flex: 1,
-    textAlign: 'center',
-    marginTop: 20,
-  },
-  body: {
-    margin: 80,
-    marginTop: 80,
-    width: '90%',
-    alignSelf: 'center',
-  },
-  input: {
-    margin: 1,
-  },
   button: {
     margin: 10,
     width: '70%',

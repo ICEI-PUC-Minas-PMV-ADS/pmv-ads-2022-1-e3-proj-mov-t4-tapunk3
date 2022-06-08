@@ -46,7 +46,6 @@ const Voluntario  = ({ route }) => {
       />
   );
 
-  //.const bodyText = "Lista de Atividade";
   return (
     <Container>
     <View>

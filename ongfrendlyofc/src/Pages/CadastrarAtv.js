@@ -25,6 +25,9 @@ const CadastrarAtv = ({ route }) => {
   const [nvoluntarios, setNvolutarios] = useState('');
   const [detalhesatv, setDetalhesatv] = useState('');
   const [data, setData] = useState(moment(new Date()).format('DD/MM/YYYY'));
+  const [nomeong, setNomeong] = useState('');
+  
+
     useEffect(() =>{
     if(item){
       setNome(item.nome);

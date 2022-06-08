@@ -1,16 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button } from 'react-native-paper';
-
-// necessario para realizar a navegaçao
-import {useNavigation} from '@react-navigation/native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Estilos from '../components/Estilos';
 import Body from '../components/body';
 import Header from '../components/Header';
+import OngLogin from '../Navigations/Auth';
+import Voluntarios from './Voluntarios';
+import {useNavigation} from '@react-navigation/native';
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 function HomePage({navigation}){
   return (
@@ -20,7 +20,7 @@ function HomePage({navigation}){
         <Button
           mode="contained"
           style={styles.button}
-          onPress={() => navigation.navigate('Voluntario')}>
+          onPress={() => navigation.navigate('Voluntarios')}>
           Voluntários
         </Button>
 
@@ -33,7 +33,7 @@ function HomePage({navigation}){
       </Body>
     </Estilos>
   );
-};
+}
 
 const styles = StyleSheet.create({
   button: {

@@ -48,8 +48,7 @@ const OngEntrar = ({ route }) => {
       cep: cep,
       descricao: descricao
     }).then(res => {
-      console.log(res);
-      navigation.goBack();
+      navigation.navigate('HomeOng');
 
       if(res){
 

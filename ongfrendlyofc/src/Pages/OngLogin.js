@@ -12,7 +12,7 @@ import { login } from '../services/authService';
 const LoginOng = () => {
 
   const navigation = useNavigation();
-  //const {setSigned, setName} = useUser();
+ // const {setSigned, setName} = useUser();
 
 
   const [email, setEmail] = useState('');
@@ -26,13 +26,14 @@ const LoginOng = () => {
       console.log(res)
       navigation.navigate('HomeOng');
 
-      /* if(res && res.user){
+     /* if(res && res.user){
       setSigned(true);
       setName(res.user.name);
        AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
+     
       }else{
         Alert.alert('Atenção', 'Usuário ou senha inválidos!');
-      } */
+      }*/
     });
   }
 
@@ -113,3 +114,4 @@ const styles = StyleSheet.create({
 });
 
 export default LoginOng;
+

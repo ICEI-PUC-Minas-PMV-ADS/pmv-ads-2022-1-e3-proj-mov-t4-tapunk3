@@ -12,7 +12,7 @@ import {getAtividades, deleteAtividades} from '../services/atividadeService';
 
 import {useIsFocused} from '@react-navigation/native';
 
-const ListarAtv = ({ route }) => {
+const ListarAtvVol = ({ route }) => {
 
   const navigation = useNavigation();
   const isFocused = useIsFocused();
@@ -26,16 +26,10 @@ const ListarAtv = ({ route }) => {
     });
   }, [isFocused]);
 
-    const handleExcluir = () => {
-    deleteAtividades(item.id).then(res => {
-      navigation.goBack();
-    } );
-  };
-
     const renderItem = ({ item }) => (
     <List.Item 
         title= {"Nome: " + item.name}
-        description={"Nº de voluntários: " + item.nvoluntarios}
+        description={"Detalhes da Atividade: " + item.detalhesatv}
         left={(props) => (
         <List.Icon
           {...props}
@@ -49,7 +43,6 @@ const ListarAtv = ({ route }) => {
           {item.data}{' '}
         </Text>
       )}
-    onPress={() => navigation.navigate('Detalhe da atividade', {item})}
       />
   );
 
@@ -77,4 +70,4 @@ const ListarAtv = ({ route }) => {
   },
   });
 
-export default ListarAtv;
+export default ListarAtvVol;

@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomePage from "../Pages/HomePage";
 import CadOngInformacoes from '../Pages/cadOngInformacoes';
 import Voluntarios from '../Pages/Voluntarios';
-import Atividade from '../Pages/Atividade';
+import ListaAtvVol from '../Pages/ListaAtvVol';
 import CadAtividade from '../Pages/CadastrarAtv';
 import ListAtividade from '../Pages/ListarAtv';
 import TelaInicialOng from '../Pages/telaInicialOng';
@@ -24,7 +24,7 @@ const Main = () => {
             <Stack.Screen name="Home" component={HomePage} />
             <Stack.Screen name="CadInformacoesOng" component={CadOngInformacoes} />
             <Stack.Screen name="Voluntarios" component={Voluntarios} />
-            <Stack.Screen name="Atividade" component={Atividade} />
+            <Stack.Screen name="Atividades da Ong" component={ListaAtvVol} />
             <Stack.Screen name="CadastrarAtividades" component={CadAtividade} />
             <Stack.Screen name="ListarAtividades" component={ListAtividade} />
             <Stack.Screen name="HomeOng" component={TelaInicialOng} />
