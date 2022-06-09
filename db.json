@@ -20,45 +20,7 @@
       "cidade": "teste",
       "cep": 11222999,
       "descricao": "Cantinho do Doguinho"
-    },
-    {
-      "name": "TT",
-      "logadouro": "TRTR",
-      "cidade": "TR",
-      "cep": "TR",
-      "descricao": "RT",
-      "id": 2
-    },
-    {
-      "name": "",
-      "logadouro": "",
-      "cidade": "",
-      "cep": "",
-      "descricao": "",
-      "id": 3
     }
   ],
-  "atividades": [
-    {
-      "name": "teste1",
-      "detalhesatv": "cuidando com Amor",
-      "nvoluntarios": "1",
-      "data": "04/06/2022",
-      "id": 1
-    },
-    {
-      "name": "Ong Friendly",
-      "detalhesatv": "Voluntarios para alimentação",
-      "nvoluntarios": "50",
-      "data": "04/06/2022",
-      "id": 6
-    },
-    {
-      "name": "teste3",
-      "detalhesatv": "v\\svd",
-      "nvoluntarios": "fb vadc ",
-      "data": "05/06/2022",
-      "id": 7
-    }
-  ]
+  "atividades": []
 }
