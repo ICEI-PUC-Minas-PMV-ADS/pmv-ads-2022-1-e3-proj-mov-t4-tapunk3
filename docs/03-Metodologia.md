@@ -42,5 +42,5 @@ Blocked: Quando alguma coisa impede a conclusão da tarefa, ela é movida para e
 
 O quadro kanban do grupo no Trello está disponível através da URL https://trello.com/b/0rasISVx/app-volunt%C3%A1rios e é apresentado no estado atual a seguir:
 
-![Trello](img/Trello21_06_2.png) 
-![Tello](img/Trello21_06.png) 
+![Trello](img/Trello21_06 (1).png) 
+![Trello](img/Trello21_06 (2).png) 
