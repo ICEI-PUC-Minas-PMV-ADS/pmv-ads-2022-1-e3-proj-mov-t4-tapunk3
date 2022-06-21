@@ -24,6 +24,7 @@ const OngEntrar = ({ route }) => {
   const [numero, setNumero] = useState('');
   const [cidade, setCidade] = useState('');
   const [cep, setCep] = useState('');
+  const [telefone, setTelefone] = useState('');
   const [descricao, setDescricao] = useState('');
 
   //const [text, setText] = React.useState('');
@@ -35,6 +36,7 @@ const OngEntrar = ({ route }) => {
       setNumero(item.numero);
       setCidade(item.cidade);
       setCep(item.cep);
+      setTelefone(item.telefone);
       setDescricao(item.descricao);
     }
   }, [item]);
@@ -98,6 +100,12 @@ const OngEntrar = ({ route }) => {
           label="CEP:"
           value={cep}
           onChangeText={(text) => setCep(text)}
+        />
+        <TextInput
+          style={styles.input}
+          label="Contato:"
+          value={telefone}
+          onChangeText={(text) => setTelefone(text)}
         />
           <TextInput
               style={styles.text}
