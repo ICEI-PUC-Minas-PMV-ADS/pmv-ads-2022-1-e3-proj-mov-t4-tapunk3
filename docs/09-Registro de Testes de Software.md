@@ -46,14 +46,14 @@ Os resultados obtidos nos testes de Software estão descritos a seguir.
 |--------------------------|-------------------------------------------------------------------------------------------|
 
 
-![Registro de Caso de teste 5](img/RT5.png)
+![Registro de Caso de teste 5](img/CT05.png)
 
-|     Evidências  RT5      |   ![Registro evidência](img/EvidenciaVisuaInfoONG.png)  
+|     Evidências  RT5      |   ![Registro evidência](img/EVCT05.png)  
 |--------------------------|-------------------------------------------------------------------------------------------|
 
 
-![Registro de Caso de teste 6](img/RT6.png)
+![Registro de Caso de teste 6](img/CT06.png)
 
-|     Evidências  RT6      |   ![Registro evidência](img/EvidenciaVisuAtiviVolu6.png)  
+|     Evidências  RT6      |   ![Registro evidência](img/EVCT06.png)  
 |--------------------------|-------------------------------------------------------------------------------------------|
                                
