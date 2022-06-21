@@ -13,6 +13,7 @@ content-type: application/json
         "numero": 1,
         "cidade": "teste",
         "cep": 11222999,
+        "telefone": "(11)11222-9999",
         "descricao": "Cantinho do Doguinho"
 }
 
@@ -28,6 +29,7 @@ content-type: application/json
         "numero": 1,
         "cidade": "teste",
         "cep": 11222999,
+        "telefone": "(11)11222-9999",
         "descricao": "Cantinho do Doguinho"
 }
 

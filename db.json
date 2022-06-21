@@ -12,15 +12,7 @@
     }
   ],
   "ong": [
-    {
-      "id": 1,
-      "name": "Teste",
-      "logadouro": "rua teste",
-      "numero": 1,
-      "cidade": "teste",
-      "cep": 11222999,
-      "descricao": "Cantinho do Doguinho"
-    }
   ],
-  "atividades": []
+  "atividades": [
+  ]
 }
