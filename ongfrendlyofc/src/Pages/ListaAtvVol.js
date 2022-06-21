@@ -33,8 +33,8 @@ const ListarAtvVol = ({ route }) => {
         left={(props) => (
         <List.Icon
           {...props}
-          color={'black'}
-          icon="book-open-variant"
+          color={'green'}
+          icon="whatsapp"
         />
         )}
       right={(props) => (
